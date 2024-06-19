@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect</title>
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <img src="img/LogoHome.png" />
+                </div>
+                <div class="textoMenu">
+                    <p class="logoNome">EduConnect</p>
+                </div>
+                <div class="menu">
+                    <li><a href="home.html"><img src="img/home icone.png">Home</a></li>
+                    <li><a href="admin.html"><span class="material-symbols-outlined icone">account_circle</span>Admin</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="containerPrincipal">
+    <div class="container">
+        <h1>Admin</h1>
+        <div class="header-cadastrar">
+            <h2 id="title-cadastrar">Cadastrar novo usuário</h2>
+            <button type="submit" class="btn-filtro" id="btn-limpar-campos" onclick="limparCampos()">Limpar campos</button>
+        </div>
+        <br/>
+
+        <form id="form">
+            <label for="nameInput" class="label-cadastrar">Nome:</label>
+            <input type="text" id="input-name" class="input-cadastrar" placeholder="Digite o nome do usuário" required>
+
+            <label for="emailInput" class="label-cadastrar">E-mail:</label>
+            <input type="email" id="input-email" class="input-cadastrar" placeholder="Digite o e-mail do usuário"
+                required>
+
+            <div class="container-btn">
+                <button type="submit" class="estilo-btn" id="btn-cadastrar">Cadastrar</button>
+            </div>
+        </form>
+        <div class="container-filtro" id="filtro">
+            <p id="title-filtro">Filtrar usuário por nome:</p>
+            <input type="text" id="inputFilter" class="input-filtro" placeholder="Digite o nome do usuário">
+            <button type="button" id="btn-filtrar" class="btn-filtro" onclick="filtrarNome()">Filtrar</button>
+            <button type="button" id="btn-limpar" class="btn-filtro" onclick="limparFiltro()">Limpar filtro</button>
+            <button type="button" class="btn-filtro" id="btn-remover" onclick="clearUsuarios()">Remover todos usuários</button>
+        </div>
+        <p id="usuario-encontrado"> Usuário encontrado! </p>
+
+    </div>
+
+    <table id="lista-usuarios" class="tabela">
+        <thead>
+            <tr id="legenda">
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Data</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+   
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+
+</body>
+
+</html>
